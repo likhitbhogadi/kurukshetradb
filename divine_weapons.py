@@ -1,7 +1,7 @@
 from colorama import Fore, Back, Style, init
 init(autoreset=True)  # Automatically reset styles after each print
 
-def get_divine_weapons():
+def get_divine_weapons(cur):
     try:
         # Ask the user for invincibility status
         invincible_status = input("Is the weapon invincible? (Enter 'Yes', 'No', or leave blank to fetch all weapons): ").strip()
