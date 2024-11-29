@@ -27,5 +27,5 @@ def print_menu():
     print(Fore.LIGHTYELLOW_EX+ Style.BRIGHT + "10." + Style.RESET_ALL + " Modify a Battle formation based on Day and army_id")
     print(Fore.LIGHTYELLOW_EX+ Style.BRIGHT + "11." + Style.RESET_ALL + " Delete Event from Yuddhahani")
     print(Fore.LIGHTYELLOW_EX+ Style.BRIGHT + "12." + Style.RESET_ALL + " Add a new Battle formation")
-    print(Fore.LIGHTRED_EX+ Style.BRIGHT + "14." + Style.RESET_ALL + " Logout")
+    print(Fore.LIGHTRED_EX+ Style.BRIGHT + "13." + Style.RESET_ALL + " Logout")
     print(Fore.LIGHTCYAN_EX+ Style.BRIGHT + "-" * 50 + Style.RESET_ALL)
