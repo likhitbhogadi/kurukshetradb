@@ -1,3 +1,6 @@
+from colorama import Fore, Style, init
+init(autoreset=True)  # Automatically reset styles after each print
+
 def add_new_formation(cur, conn):                  #didn't check this have to check this function
     try:
         # Prompt the user for formation details
@@ -18,7 +21,7 @@ def add_new_formation(cur, conn):                  #didn't check this have to ch
         # Commit the transaction
         conn.commit()
         
-        print(f"Formation '{formation_name}' added successfully for Army ID {army_id} on Day {day}.")
+        print( Fore.LIGHTYELLOW_EX+ Style.BRIGHT + f"Formation '{formation_name}' added successfully for Army ID {army_id} on Day {day}.")
     
     except Exception as e:
         # Rollback the transaction in case of an error

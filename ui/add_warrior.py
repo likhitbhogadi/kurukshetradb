@@ -6,8 +6,9 @@ def Add_warrior(cur, con):
         
         # Basic Warrior Information
         row["ID"] = int(input("Warrior ID: "))
-        row["Bdate"] = input("Birth Date (YYYY-MM-DD): ")
-        row["battle_status"] = input("Battle Status (alive/deceased): ")
+        row["Bdate"] = input("Birth Date: ")
+        row["rank"] = input("Rank: ")
+        row["battle_status"] = input("Battle Status (Alive/Deceased): ")
         row["kingdom_id"] = int(input("Kingdom ID: "))
         
         # Ask for the warrior's name(s)
@@ -28,7 +29,7 @@ def Add_warrior(cur, con):
         
         # Insert warrior's basic information into WARRIOR table
         query = "INSERT INTO `WARRIOR` (`WARRIOR_ID`, `DOB`, `RANK`, `BATTLE_STATUS`, `KINGDOM_ID`) VALUES (%d, '%s', '%s', '%s', %d)" % (
-            row["ID"], row["Bdate"], 'Unknown', row["battle_status"], row["kingdom_id"])
+            row["ID"], row["Bdate"], row["rank"], row["battle_status"], row["kingdom_id"])
         
         print("Executing Query to insert into WARRIOR table: ", query)
         cur.execute(query)
